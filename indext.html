@@ -1,198 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
+<!-- Ultimate Game Stash file--> 
+<!-- For the regularly updating doc go to https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/ -->
+
+
+
+
+<!DOCTYPE html> <html> <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Astro</title>
-    <meta name="description" content="We're a passionate team focused on creating reliable, effective tools to enhance your gaming and online experiences. We prioritize quality and ease of use, ensuring every solution we offer meets the highest standards to help you get the most out of your online activities.">
-    <meta property="og:title" content="Astro">
-    <meta property="og:description" content="Discover effective tools that enhance your gaming and online experiences. Prioritizing quality and ease of use, we deliver solutions that empower your digital journey.">
-    <meta property="og:image" content="/favicon">
-    <meta property="og:url" content="https://pathetic.one">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Astro">
-    <meta property="og:locale" content="en_US">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1327437196743020635/1342377888216780861/image.png" type="image/png">
+    <title>Game Down</title>
+    <meta property="og:title" content="antiv1 - Game Status">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/index.css">
-    <style>
-        @font-face {
-            font-family: "Tilt Warp";
-            src: url("path-to-your-font-file/TiltWarp.woff2") format("woff2"),
-                 url("path-to-your-font-file/TiltWarp.woff") format("woff");
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        body {
-            background: #121212;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-        }
-
-        .container {
-            background: #1e1e1e;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-            text-align: center;
-            width: 400px;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            height: auto;
-        }
-
-        h1 {
-            font-family: "Tilt Warp", sans-serif;
-            font-size: 4rem;
-            color: #ffffff;
-            margin-bottom: 16px;
-            margin-top: -16px;
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.5);
-            white-space: nowrap;
-            position: relative;
-            animation: glow-animation 3s infinite alternate;
-        }
-
-        @keyframes glow-animation {
-            0% {
-                text-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.5);
-            }
-            100% {
-                text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8), 0 0 80px rgba(255, 255, 255, 0.5);
-            }
-        }
-
-        .button-group {
-            display: flex;
-            justify-content: space-between;
-            gap: 14px;
-            margin-top: 20px;
-            width: 100%;
-        }
-
-        .button-group button {
-            background: #3a3a3a;
-            color: #ffffff;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 16px;
-            font-weight: 500;
-            flex: 1;
-            justify-content: center;
-        }
-
-        .button-group button:hover {
-            box-shadow: 0 0 14px rgba(255, 255, 255, 0.3);
-            background: #4a4a4a;
-        }
-
-        input[type="text"] {
-            background: #2a2a2a;
-            border: 1px solid #444;
-            color: #ffffff;
-            padding: 9px;
-            border-radius: 8px;
-            width: 90%;
-            outline: none;
-            margin-bottom: 15px;
-            font-size: 14px;
-        }
-
-        input[type="text"]::placeholder {
-            color: #bbbbbb;
-        }
-
-        /* Snowfall effect */
-        .snow {
-            font-size: 22px;
-            position: absolute;
-            opacity: 0;
-            animation: snow-fall linear infinite;
-        }
-
-        @keyframes snow-fall {
-            0% {
-                opacity: 0;
-                transform: translateY(-500px);
-            }
-            50% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(100vh);
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="initial-snow"></div> <!-- Snow Container -->
-
-    <div class="container" id="login-container">
-      <div class="content-wrapper">
-        <h1>KEY SYSTEM</h1>
-
-        <div class="input-group">
-          <input type="text" id="Key" placeholder="Enter your access key" autocomplete="off">
-        </div>
-        
-        <div class="button-group">
-          <button id="EnterBtn">
-            <img src="https://cdn.discordapp.com/attachments/995771099465908316/1341879471153614958/door.png?ex=67b79a24&is=67b648a4&hm=585cc6fae38dd2979679daa260671e78257a4d53ec1f89b02f172edbf2050d0e&" alt="Enter" style="width: 20px; height: 20px;"> Enter
-          </button>
-          <button id="discordBtn" onclick="window.location.href='https://discord.gg/astroscripts'">
-            <i class="fab fa-discord"></i> Discord
-          </button>
-        </div>
-        
-        <div class="button-group">
-          <button id="getKeyBtn">
-            <i class="fas fa-key"></i> Get Key
-          </button>
-        </div>
-
-        <div id="alert" class="alert"></div>
-      </div>
-    </div>
-
-    <script>
-        // Snowfall JS
-        document.addEventListener("DOMContentLoaded", function() {
-            const snowContainer = document.querySelector(".initial-snow");
-            
-            function createSnowflakes(amount) {
-                for (let i = 0; i < amount; i++) {
-                    const snowflake = document.createElement("div");
-                    snowflake.classList.add("snow");
-                    snowflake.innerHTML = "&#10052;"; // Snowflake symbol
-
-                    // Position snowflake randomly at the top of the screen (above the viewport)
-                    snowflake.style.left = `${Math.random() * 100}vw`; // Random position from 0 to 100% of the viewport width
-                    snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`; // Random animation speed (between 2-5 seconds)
-                    snowflake.style.animationDelay = `${Math.random() * 5}s`; // Random delay before starting to fall
-
-                    snowContainer.appendChild(snowflake);
-                }
-            }
-
-            // Generate snowflakes
-            createSnowflakes(50); // Change 50 to any number to increase/decrease the number of snowflakes
-        });
-    </script>
-
-</body>
-</html>
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1327437196743020635/1342377888216780861/image.png">
+    <meta property="og:description" content="Game is currently down. Please check back later.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="antiv1">
+    <meta property="og:locale" content="en_US">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wergboy/NLP@e46f2d7f33015cf93201e664a2e493800c03284d/pt/css/message_box_ui.css"> <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wergboy/NLP@e46f2d7f33015cf93201e664a2e493800c03284d/pt/css/customization.css"> <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wergboy/NLP@e46f2d7f33015cf93201e664a2e493800c03284d/pt/css/debug_ui.css"> <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wergboy/NLP@e46f2d7f33015cf93201e664a2e493800c03284d/pt/css/editor.css"> <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wergboy/NLP@e46f2d7f33015cf93201e664a2e493800c03284d/pt/css/editor_height_selector.css"> <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wergboy/NLP@e46f2d7f33015cf93201e664a2e493800c03284d/pt/css/hint.css"> <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wergboy/NLP@e46f2d7f33015cf93201e664a2e493800c03284d/pt/css/loading_ui.css"> <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wergboy/NLP@e46f2d7f33015cf93201e664a2e493800c03284d/pt/css/menu.css"> <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wergboy/NLP@e46f2d7f33015cf93201e664a2e493800c03284d/pt/css/speedometer.css"> <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wergboy/NLP@e46f2d7f33015cf93201e664a2e493800c03284d/pt//css/theme.css"> <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wergboy/NLP@e46f2d7f33015cf93201e664a2e493800c03284d/pt/css/time_announcer.css"> <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wergboy/NLP@e46f2d7f33015cf93201e664a2e493800c03284d/pt/css/timer.css"> <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wergboy/NLP@e46f2d7f33015cf93201e664a2e493800c03284d/pt/css/track_export_ui.css"> <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wergboy/NLP@e46f2d7f33015cf93201e664a2e493800c03284d/pt/css/track_selection_ui.css"> <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wergboy/NLP@e46f2d7f33015cf93201e664a2e493800c03284d/pt/css/transition_system.css"> </head> <body> <canvas id="screen"></canvas> <div id="ui"></div> <div id="transition-layer"></div> <script src="https://cdn.jsdelivr.net/gh/wergboy/NLP@e46f2d7f33015cf93201e664a2e493800c03284d/pt/lib/ammo.js" defer></script> <script type="module" src="https://cdn.jsdelivr.net/gh/wergboy/NLP@22f6094b69b1c9d45e17a82e93a41b7d88f99574/pt/dist/bundle.js" defer></script> </body> </html>
